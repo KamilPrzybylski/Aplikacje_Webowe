@@ -1,7 +1,7 @@
 import { Readable, Writable } from "stream"
 import * as fs from 'fs'
 
-const file = fs.createWriteStream(`liczby/random-${Date.now().toString()}.txt`, liczby)
+const file = fs.createWriteStream(`liczby/random-${Date.now().toString()}.txt`)
 var zmienna
 async function * generate(){
     for(var i = 0; i < 20; i++){
