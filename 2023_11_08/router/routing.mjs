@@ -12,9 +12,9 @@ const router = express.Router()
 //     database: 'database'
 // })
 
-// conn.connect((err) => {
-//     if (err) {
-//         throw err
+// conn.connect((e) => {
+//     if (e) {
+//         throw e
 //     }
 //     else {
 //         console.log('Connected to database')
@@ -44,19 +44,18 @@ router.get('/', (req, res) => {
 router.get('/students', async (req, res) => {
     const students = await prisma.students.findMany()
 
-    if(students == "")
-    {
+    if(students == "") {
         res.json(ERR_404)
     }
-    else{
+    else {
         res.json(students)
     }
 
     // const students = []
     // const sql = "SELECT * FROM students;"
-    // conn.query(sql, (err, result)=>{
-    //     if (err) {
-    //         throw err
+    // conn.query(sql, (e, result)=>{
+    //     if (e) {
+    //         throw e
     //     }
     //     else {
     //         result.forEach((res) => {
@@ -71,19 +70,18 @@ router.get('/students', async (req, res) => {
 router.get('/subjects', async (req, res) => {
     const subjects = await prisma.subjects.findMany()
 
-    if(subjects == "")
-    {
+    if(subjects == "") {
         res.json(ERR_404)
     }
-    else{
+    else {
         res.json(subjects)
     }
 
     // const subjects = []
     // const sql = "SELECT * FROM subjects;"
-    // conn.query(sql, (err, result)=>{
-    //     if (err) {
-    //         throw err
+    // conn.query(sql, (e, result)=>{
+    //     if (e) {
+    //         throw e
     //     }
     //     else {
     //         result.forEach((res) => {
@@ -103,19 +101,18 @@ router.get('/students/:id', async (req, res) => {
         }
     })
     
-    if(student == "")
-    {
+    if(student == "") {
         res.json(ERR_404)
     }
-    else{
+    else {
         res.json(student)
     }
 
     // const student = []
     // const sql = `SELECT * FROM students WHERE id = ${id};`
-    // conn.query(sql, (err, result)=>{
-    //     if (err) {
-    //         throw err
+    // conn.query(sql, (e, result)=>{
+    //     if (e) {
+    //         throw e
     //     }
     //     else {
     //         if (result.length) {
@@ -141,19 +138,18 @@ router.get('/subjects/:id', async (req, res) => {
         }
     })
     
-    if(subject == "")
-    {
+    if(subject == "") {
         res.json(ERR_404)
     }
-    else{
+    else {
         res.json(subject)
     }
 
     // const subject = []
     // const sql = `SELECT * FROM subjects WHERE id = ${id};`
-    // conn.query(sql, (err, result)=>{
-    //     if (err) {
-    //         throw err
+    // conn.query(sql, (e, result)=>{
+    //     if (e) {
+    //         throw e
     //     }
     //     else {
     //         if (result.length) {
