@@ -13,7 +13,7 @@ const router = express.Router()
 // })
 
 // conn.connect((e) => {
-//     if (e) {
+//     if(e) {
 //         throw e
 //     }
 //     else {
@@ -54,7 +54,7 @@ router.get('/students', async (req, res) => {
     // const students = []
     // const sql = "SELECT * FROM students;"
     // conn.query(sql, (e, result)=>{
-    //     if (e) {
+    //     if(e) {
     //         throw e
     //     }
     //     else {
@@ -80,7 +80,7 @@ router.get('/subjects', async (req, res) => {
     // const subjects = []
     // const sql = "SELECT * FROM subjects;"
     // conn.query(sql, (e, result)=>{
-    //     if (e) {
+    //     if(e) {
     //         throw e
     //     }
     //     else {
@@ -111,7 +111,7 @@ router.get('/students/:id', async (req, res) => {
     // const student = []
     // const sql = `SELECT * FROM students WHERE id = ${id};`
     // conn.query(sql, (e, result)=>{
-    //     if (e) {
+    //     if(e) {
     //         throw e
     //     }
     //     else {
@@ -148,7 +148,7 @@ router.get('/subjects/:id', async (req, res) => {
     // const subject = []
     // const sql = `SELECT * FROM subjects WHERE id = ${id};`
     // conn.query(sql, (e, result)=>{
-    //     if (e) {
+    //     if(e) {
     //         throw e
     //     }
     //     else {
