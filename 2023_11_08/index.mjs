@@ -19,7 +19,7 @@ const prisma = new PrismaClient()
 // })
 
 // conn.connect((e) => {
-//     if (e) {
+//     if(e) {
 //         throw e
 //     }
 //     else {
