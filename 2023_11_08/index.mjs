@@ -18,9 +18,9 @@ const prisma = new PrismaClient()
 //     database: 'database'
 // })
 
-// conn.connect((err) => {
-//     if (err) {
-//         throw err
+// conn.connect((e) => {
+//     if (e) {
+//         throw e
 //     }
 //     else {
 //         console.log('Connected to database')
@@ -50,17 +50,16 @@ app.post('/kontakt', async (req, res) => {
             temat: dataToSend.tematy,
             wiadomosc: dataToSend.wiadomosc
         }
-    }).then(()=>{
-        res.redirect('/')
-    }).catch((err)=>{
-        throw err
+    }).catch((e)=>{
+        throw e
     })
+    res.redirect('/')
     // const valuesToSend = Object.values(dataToSend)
     // const sql = "INSERT INTO messages (imie, email, temat, wiadomosc) VALUES (?)"
 
-    // conn.query(sql, [valuesToSend], (err) => {
-    //     if(err) {
-    //         throw err
+    // conn.query(sql, [valuesToSend], (e) => {
+    //     if(e) {
+    //         throw e
     //     }
     //     else {
     //         console.log('Added to db')
