@@ -59,9 +59,9 @@ router.get('/students', (req, res) => {
 router.get('/subjects', (req, res) => {
     const subjects = []
     const sql = "SELECT * FROM subjects;"
-    conn.query(sql, (err, result)=>{
-        if (err) {
-            throw err
+    conn.query(sql, (e, result)=>{
+        if(e) {
+            throw e
         }
         else {
             result.forEach((res) => {
@@ -77,9 +77,9 @@ router.get('/students/:id', (req, res) => {
     const id = req.params.id
     const student = []
     const sql = `SELECT * FROM students WHERE id = ${id};`
-    conn.query(sql, (err, result)=>{
-        if (err) {
-            throw err
+    conn.query(sql, (e, result)=>{
+        if(e) {
+            throw e
         }
         else {
             if (result.length) {
@@ -101,9 +101,9 @@ router.get('/subjects/:id', (req, res) => {
     const id = req.params.id
     const subject = []
     const sql = `SELECT * FROM subjects WHERE id = ${id};`
-    conn.query(sql, (err, result)=>{
-        if (err) {
-            throw err
+    conn.query(sql, (e, result)=>{
+        if(e) {
+            throw e
         }
         else {
             if (result.length) {
