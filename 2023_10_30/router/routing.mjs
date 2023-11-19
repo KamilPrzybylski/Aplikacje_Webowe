@@ -8,9 +8,9 @@ const conn = createConnection({
     database: 'database'
 })
 
-conn.connect((err) => {
-    if (err) {
-        throw err
+conn.connect((e) => {
+    if(e) {
+        throw e
     }
     else {
         console.log('Connected to database')
@@ -42,9 +42,9 @@ router.get('/', (req, res) => {
 router.get('/students', (req, res) => {
     const students = []
     const sql = "SELECT * FROM students;"
-    conn.query(sql, (err, result)=>{
-        if (err) {
-            throw err
+    conn.query(sql, (e, result)=>{
+        if(e) {
+            throw e
         }
         else {
             result.forEach((res) => {
