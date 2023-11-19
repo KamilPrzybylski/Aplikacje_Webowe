@@ -16,9 +16,9 @@ const conn = createConnection({
     database: 'database'
 })
 
-conn.connect((err) => {
-    if (err) {
-        throw err
+conn.connect((e) => {
+    if(e) {
+        throw e
     }
     else {
         console.log('Connected to database')
@@ -44,9 +44,9 @@ app.post('/kontakt', (req, res) => {
     const valuesToSend = Object.values(dataToSend)
     const sql = "INSERT INTO messages (imie, email, temat, wiadomosc) VALUES (?)"
 
-    conn.query(sql, [valuesToSend], (err) => {
-        if(err) {
-            throw err
+    conn.query(sql, [valuesToSend], (e) => {
+        if(e) {
+            throw e
         }
         else {
             console.log('Added to db')
