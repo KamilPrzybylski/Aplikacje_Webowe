@@ -8,7 +8,7 @@ const app = express();
 const port = 3000;
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
-const url = "mongodb+srv://kamilprzybylski:Placki123@cluster0.2zn7bdh.mongodb.net/?retryWrites=true&w=majority"
+const url = ""
 const client = new MongoClient(url, {
     serverApi: {
         version: ServerApiVersion.v1,
