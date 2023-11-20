@@ -1,9 +1,6 @@
-// import { createConnection } from 'mysql'
 import express from 'express'
-// import { PrismaClient } from '@prisma/client'
 import { MongoClient, ServerApiVersion } from 'mongodb'
 
-// const prisma = new PrismaClient()
 const router = express.Router()
 const url = ""
 const client = new MongoClient(url, {
