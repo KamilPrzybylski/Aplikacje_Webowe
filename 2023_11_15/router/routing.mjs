@@ -5,7 +5,7 @@ import { MongoClient, ServerApiVersion } from 'mongodb'
 
 // const prisma = new PrismaClient()
 const router = express.Router()
-const url = "mongodb+srv://kamilprzybylski:Placki123@cluster0.2zn7bdh.mongodb.net/?retryWrites=true&w=majority"
+const url = ""
 const client = new MongoClient(url, {
   serverApi: {
     version: ServerApiVersion.v1,
