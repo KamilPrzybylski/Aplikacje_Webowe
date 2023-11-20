@@ -14,22 +14,6 @@ const client = new MongoClient(url, {
   }
 })
 
-// const conn = createConnection({
-//     host: '172.25.224.1',
-//     user: 'root',
-//     password: '',
-//     database: 'database'
-// })
-
-// conn.connect((err) => {
-//     if (err) {
-//         throw err
-//     }
-//     else {
-//         console.log('Connected to database')
-//     }
-// })
-
 const ERR_404 = {
     'Error 404': 'Page not found'
 }
