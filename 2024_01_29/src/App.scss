@@ -1,0 +1,95 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: navajowhite;
+}
+
+div {
+  background-color: hotpink;
+}
+
+h1, p {
+  margin: 0;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+nav {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.navbars {
+  width: 150px;
+  height: 50px;
+  background-color: #FF79C4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+a {
+  color: navajowhite;
+  text-decoration: none;
+}
+
+$primary-color: #FF79C4;
+$secondary-color: #6c757d;
+$background-color: hotpink;
+
+form {
+  margin: 10px;
+  padding: 20px;
+  background-color: $background-color;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  div {
+    width: 95%;
+    margin: 15px;
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid $secondary-color;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 10px;
+    }
+  }
+  button[type="submit"] {
+    padding: 10px 20px;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}
